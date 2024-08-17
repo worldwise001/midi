@@ -32,7 +32,7 @@
                             <artifact>*:*</artifact>
                             <excludes>
                                 <exclude>META-INF/*</exclude>
-                                <exclude>META-INF.*</exclude>
+                                <exclude>META-INF.versions.9.module-info</exclude>
                             </excludes>
                         </filter>
                     </filters>
