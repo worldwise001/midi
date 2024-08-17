@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>sh.shh</groupId>
-    <artifactId>midi</artifactId>
+    <artifactId>roland-midi-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
