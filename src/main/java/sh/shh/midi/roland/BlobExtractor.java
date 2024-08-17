@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.regex.Matcher;
@@ -26,7 +27,7 @@ public class BlobExtractor {
         try {
             Matcher matcher = REGEX.matcher(jarEntry.getName());
             matcher.find();
-            String extractedFileName = matcher.group(1);
+            String extractedFileName = Path.of(matcher.group(1)).normalize().toString();
             File outputFile = new File(outputDir, extractedFileName);
             System.out.println("Extracting " + jarEntry.getName() + " -> " + outputFile.getPath());
             if (!outputFile.exists()) {
