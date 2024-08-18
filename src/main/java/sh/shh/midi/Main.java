@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         try {
-            BlobExtractor.extractAll("lib/test.jar", "out");
+            BlobExtractor.extractAll("lib/test.jar", "output");
         } catch (IOException e) {
             e.printStackTrace();
         }
