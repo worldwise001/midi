@@ -35,7 +35,7 @@ public class BlobExtractor {
                 throw new NoSuchFileException(outputDir.getPath());
             }
             JarEntry jarEntry = jarFile.getJarEntry(jarEntryName);
-            Matcher matcher = REGEX.matcher(jarEntryName);
+            Matcher matcher = REGEX.matcher(Path.of(jarEntryName).normalize().toString());
             matcher.find();
             String extractedFileName = Path.of(matcher.group(1)).normalize().toString();
             File outputFile = new File(outputDir, extractedFileName);
